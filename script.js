@@ -13,3 +13,19 @@ const apiUrls = [
 ];
 
 // You can write your code here
+const output_all = document.getElementById("output-all");
+const output_any = document.getElementById("output-any");
+
+Promise.all(apiUrls).then((res) => (output_all.innerText = new Date().toLocaleTimeString()))
+Promise.any(apiUrls).then((res) => (output_any.innerText = new Date().toLocaleTimeString()))
+
+
+
+
+
+
+
+
+
+
+	
